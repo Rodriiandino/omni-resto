@@ -1,0 +1,38 @@
+---
+const navItems = [
+  { text: "Características", href: "#features" },
+  { text: "Versiones", href: "#versions" },
+  { text: "Para Quién", href: "#for-who" },
+  { text: "Contacto", href: "#contact" }
+];
+---
+
+<header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+      <div class="flex items-center">
+        <a href="/" class="text-2xl font-bold text-primary-600">
+          OmniResto
+        </a>
+      </div>
+      <nav class="hidden md:flex space-x-8">
+        {navItems.map(item => (
+          <a 
+            href={'#'}
+            class="text-secondary-600 hover:text-primary-600 transition-colors cursor-pointer opacity-60"
+          >
+            {item.text}
+          </a>
+        ))}
+      </nav>
+      <button 
+        class="md:hidden text-secondary-600"
+        aria-label="Menu"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
